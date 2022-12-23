@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.order.consumer.CartConsumer;
+import com.app.order.consumer.CartConsumer2;
 
 @RestController
 @RequestMapping("/order")
 public class OrderRestController {
 	@Autowired
-	private CartConsumer consumer;
+	private CartConsumer2 consumer;
 	
 	@GetMapping("/place")
 	public ResponseEntity<String> placeOrder() {

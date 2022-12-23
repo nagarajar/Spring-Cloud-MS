@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-@Component
+//@Component
 public class CartConsumer 
 {
 	//Impl class is : EurekaDiscoveryClient -- given by Netflix Eureka
