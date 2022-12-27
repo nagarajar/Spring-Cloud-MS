@@ -16,12 +16,16 @@ import com.app.model.Cart;
 @RequestMapping("/cart")
 public class CartRestController 
 {
-	@Value("${server.port}")
-	private String port;
+	/*
+	 * @Value("${server.port}") private String port;
+	 */
+	@Value("${my.app.tittle}")
+	private String tittle;
 	
 	@GetMapping("/info")
 	public ResponseEntity<String> showMessage(){
-		return ResponseEntity.ok("Welcome to Cart Service...! => "+port );
+		//return ResponseEntity.ok("Welcome to Cart Service...! => "+port );
+		return ResponseEntity.ok("Welcome to Cart Service...! => "+tittle );
 	}
 	
 	@GetMapping("/find/{id}")
