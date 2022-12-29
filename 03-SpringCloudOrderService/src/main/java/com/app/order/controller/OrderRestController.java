@@ -1,6 +1,7 @@
 package com.app.order.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.app.order.consumer.CartConsumerFeign;
 
 @RestController
 @RequestMapping("/order")
+@RefreshScope
 public class OrderRestController {
 	@Autowired
 	private CartConsumerFeign consumer;

@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import com.app.model.Cart;
 
 @RestController
 @RequestMapping("/cart")
+@RefreshScope
 public class CartRestController 
 {
 	/*
